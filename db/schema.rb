@@ -14,6 +14,12 @@
 ActiveRecord::Schema.define(version: 20160422050032) do
 
   create_table "posts", force: :cascade do |t|
+    t.string   "myname"
+    t.string   "mymajor1"
+    t.string   "mymajor2"
+    t.string   "mygrade"
+    t.string   "myclub"
+    t.string   "myclubjoin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,28 +1,28 @@
 <div class="container">
     <div class="col-sm-12"><h1><strong>My English Profile</strong></h1><hr></div>
-    <form class="form-horizontal" role="form" action="/write" method="POST">
+    <form class="form-horizontal" role="form" action="/siljae_update/<%= @one_post.id%>" method="POST">
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Name:</label>
         <div class="col-sm-5">
-          <input name="myname" type="text" class="form-control" id="name" placeholder="e.g. Jay Mincheol Cho">
+          <input name="myname" type="text" class="form-control" id="name" value="<%= @one_post.myname %>>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="major">1st Major:</label>
         <div class="col-sm-5">
-          <input name="mymajor1" type="text" class="form-control" id="name" placeholder="e.g. English literature">
+          <input name="mymajor1" type="text" class="form-control" id="name" value="<%= @one_post.mymajor1 %>>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="major">2nd Major:</label>
         <div class="col-sm-5">
-          <input name="mymajor2" type="text" class="form-control" id="name" placeholder="e.g. Business administration">
+          <input name="mymajor2" type="text" class="form-control" id="name" value="<%= @one_post.mymajor2 %>>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="major">Grade:</label>
         <div class="col-sm-5">
-          <input name="mygrade" type="text" class="form-control" id="name" placeholder="e.g. freshman / sophomore / junior / senior">
+          <input name="mygrade" type="text" class="form-control" id="name" value="<%= @one_post.mygrade %>>
         </div>
       </div>
       <hr>
@@ -30,13 +30,13 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="major">Club activity:</label>
         <div class="col-sm-5">
-          <input name="myclub" type="text" class="form-control" id="name" placeholder="e.g. drama club">
+          <input name="myclub" type="text" class="form-control" id="name" value="<%= @one_post.myclub %>>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="major">First joined:</label>
         <div class="col-sm-5">
-          <input name="myclubjoin" type="text" class="form-control" id="name" placeholder="e.g. sophomore">
+          <input name="myclubjoin" type="text" class="form-control" id="name" value="<%= @one_post.myclubjoin %>>
         </div>
       </div>
       
@@ -47,6 +47,4 @@
         </div>
       </div>
     </form>
-    <hr>
-    <a href='/list'>작성된 Profile 확인하기</a>
 </div>

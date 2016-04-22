@@ -1,0 +1,19 @@
+<div class="container">
+<h1><strong>Your English Profile</strong></h1>
+<hr>
+    <% @every_post.each do |p| %>
+    <%= p.created_at.in_time_zone("Asia/Seoul").strftime("%Y년 %m월 %d일 %H시%M분%S초") %><br>
+
+<br>My name is <em><%= p.myname %></em> and I'm currently a <em><%= p.mygrade %></em> in college.<br>
+I have a double major in <em><%= p.mymajor1 %></em> and <em><%= p.mymajor2 %></em>.<br>
+When I became <em><%= p.myclubjoin %></em>, I joined a/an <em><%= p.myclub%></em>.<br>
+My involvement in the <em><%= p.myclub %></em> helped me become a more confident person.<br>
+My university club experiences were priceless and an indispensable part of my college life.<br>
+
+    <a href="/update_view/<%= p.id %>">[수정]</a>
+    <a href="/destroy/<%= p.id %>">[삭제]</a>
+    
+    <% end %>
+<hr><a href='/'>메인으로 가기</a>
+    
+</div>
